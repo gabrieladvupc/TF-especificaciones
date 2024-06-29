@@ -1,0 +1,15 @@
+Feature: Procesamiento de pagos
+ Como cliente, quiero poder realizar pagos 
+ seguros para mis pedidos de entrega.
+
+Scenario: Procesamiento de pago
+ Dado que el cliente ha solicitado una entrega "<order_requested>"
+ Cuando el cliente ingrese los detalles de pago "<payment_details>"
+ Entonces el sistema debe confirmar el pago y actualizar el estado
+ del pedido "<confirm_payment_update_status>".
+
+Ejemplos:
+| order_requested |	payment_details | support_payment_methods |	confirm_payment_update_status
+| Pedido #1	| 	Tarjeta de crédito |	Pago confirmado, estado del pedido actualizado
+| Pedido #2	|  PayPal | Pago confirmado, estado del pedido actualizado
+

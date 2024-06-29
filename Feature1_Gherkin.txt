@@ -1,0 +1,12 @@
+Feature: La opcion de buscar rutas disponibles
+	Como usuario de SSMap quiero buscar rutas posibles para tener en cuenta las múltiples
+ 	rutas que debo de tomar en cuenta
+Scenario: Usuario puede observar las rutas posibles a su destino.
+
+	Dado que el "<new_estudiante>" se encuentra en la página principal 
+	Y le da en la opción “Buscar ruta” selecciona la "<new_ruta>" en la que se desea dirigir
+	Cuando selecciona la ruta en la que quieras dirigir
+	Entonces la aplicación encontrará todas las "<AvailableRoute>"  para llegar al destino mediante un "<Report>"
+Ejemplos: 
+	|new_estudiante| new_ruta| ruta_disponibles|Report 
+    |Renato Paucar, VerificationRoute, Rutas disponibles
